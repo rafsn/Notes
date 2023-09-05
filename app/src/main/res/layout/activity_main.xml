@@ -6,17 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/notesHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:fontFamily="@font/poppins"
+        android:text="@string/notes"
+        android:textColor="@color/orange"
+        android:textSize="24sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notesRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/notesHeading"
+        android:padding="@dimen/padding_normal" />
+
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_alignParentBottom="true"
         android:layout_marginEnd="@dimen/margin_normal"
-        android:src="@drawable/ic_add"
-        app:tint = "@color/white"
+        android:layout_marginBottom="@dimen/margin_normal"
         android:backgroundTint="@color/orange"
-        android:contentDescription="@string/adicionar_notas_fab" />
+        android:contentDescription="@string/adicionar_notas_fab"
+        android:src="@drawable/ic_add"
+        app:tint="@color/white" />
 
 </RelativeLayout>
